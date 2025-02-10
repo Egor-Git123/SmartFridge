@@ -211,6 +211,10 @@ def upload_file():
         return "No QR code found"
 
 
+@app.route("/prod_list", methods=['POST', 'GET'])
+def prod_list():
+    return render_template("prod_list.html")
+
 
 
 
