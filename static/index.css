@@ -1,0 +1,86 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Заголовок и навигация */
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px; /* Добавлено для создания области клика */
+    border-radius: 5px; /* Закругленные углы */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Переходы для фона и трансформации */
+}
+
+/* Эффект при наведении на ссылки */
+nav ul li a:hover {
+    background-color: #f4f4f4; /* Изменение фона при наведении */
+    color: #35424a; /* Изменение цвета текста при наведении */
+    transform: scale(1.1); /* Увеличение размера ссылки при наведении */
+}
+
+/* Основной контент */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #35424a;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #35424a;
+}
+
+ul {
+    margin-top: 10px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

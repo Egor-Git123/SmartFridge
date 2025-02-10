@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Электронный холодильник</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='products_css.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        .delete-form {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .delete-form input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .delete-form button {
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .delete-form button:hover {
+            background-color: #c82333;
+        }
+        @media (max-width: 600px) {
+            nav ul li {
+                margin: 10px 0;
+            }
+            .delete-form input[type="text"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Электронный холодильник</h1>
+    <nav>
+        <ul>
+            <li><a href="/upload_qr">Загрузить продукты</a></li>
+            <li><a href="/products">Содержимое</a></li>
+            <li><a href="/MainPage">Главная</a></li>
+            <li><a href="/deleted">Удаленные</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Тип</th>
+            <th>Дата производства</th>
+            <th>Дата окончания</th>
+            <th>Вес (г)</th>
+            <th>Калории</th>
+            <th>Общее количество</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for pr in products %}
+        <tr>
+            <td>{{ pr.id }}</td>
+            <td>{{ pr.name }}</td>
+            <td>{{ pr.type }}</td>
+            <td>{{ pr.f_date }}</td>
+            <td>{{ pr.l_date }}</td>
+            <td>{{ pr.weight }}</td>
+            <td>{{ pr.calories }}</td>
+            <td>{{ pr.total }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</main>
+</body>
+</html>

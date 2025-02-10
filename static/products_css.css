@@ -1,0 +1,55 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили для body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Стили для заголовка и навигации */
+header {
+    background-color: #35424a; /* Цвет фона заголовка */
+    padding: 20px 0; /* Отступы сверху и снизу */
+}
+
+nav ul {
+    list-style-type: none; /* Убираем маркеры у списка */
+    text-align: center; /* Центрирование списка */
+}
+
+nav ul li {
+    display: inline; /* Выстраиваем элементы в строку */
+    margin: 0 15px; /* Отступы между элементами */
+}
+
+nav a {
+    color: #ffffff; /* Цвет текста ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 18px; /* Размер шрифта */
+    transition: color 0.3s ease, transform 0.3s ease; /* Плавные переходы для цвета и трансформации */
+}
+
+/* Эффект при наведении на ссылки */
+nav a:hover {
+    color: #ffcc00; /* Изменение цвета текста при наведении */
+    transform: scale(1.1); /* Увеличение размера ссылки при наведении */
+}
+
+/* Дополнительные стили для страницы */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #35424a; /* Цвет фона подвала */
+    color: #ffffff; /* Цвет текста подвала */
+}
